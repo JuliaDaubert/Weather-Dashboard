@@ -18,7 +18,7 @@ function initPage() {
 
     function getWeather(cityName) {
         //  Using saved city name, execute a current condition get request from open weather map api
-        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric" + "&appid=" + APIKey;
         axios.get(queryURL)
             .then(function (response) {
                 console.log(response);
@@ -29,11 +29,12 @@ function initPage() {
                 const day = currentDate.getDate();
                 const month = currentDate.getMonth() + 1;
                 const year = currentDate.getFullYear();
-                nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
+                nameEl.innerHTML = response.data.name + " (" + day + "/" + month + "/" + year + ") ";
                 let weatherPic = response.data.weather[0].icon;
                 currentPicEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
                 currentPicEl.setAttribute("alt", response.data.weather[0].description);
-                currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+                currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " C";
+                console.log(currentTempEl);
                 currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
                 currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
                 let lat = response.data.coord.lat;
