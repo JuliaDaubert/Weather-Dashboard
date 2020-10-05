@@ -61,4 +61,5 @@ Does the User click on "Clear History" these Search Results, the local storage a
 * Each Search History could be generated as a button, the User can click and the location being searched for.
 * There could be a button generating the current location of the User
 * Display an image instead of having a blank result area
+* Metric display not working
 
