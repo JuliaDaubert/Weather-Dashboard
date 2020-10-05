@@ -1,0 +1,13 @@
+#header {
+color: black;
+background-color: lightskyblue;
+padding: 50px;
+font-weight: bold;
+background-image: url("sky.png");
+font-family: 'Roboto', sans-serif;
+font-size: xx-large;
+}
+
+.container {
+    padding: 100px;
+}
