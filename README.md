@@ -8,6 +8,7 @@ Application that generates the current weather and a 5 Day Forecast based on the
 * [Screenshot](#Screenshot)
 * [Setup](#Setup)
 * [Improvement](#Improvement)
+* [Deployed Project](#Deployed%20Project)
 
 
 
@@ -63,3 +64,5 @@ Does the User click on "Clear History" these Search Results, the local storage a
 * Display an image instead of having a blank result area
 * Metric display not working
 
+### Deployed Project
+https://juliadaubert.github.io/Weather-Dashboard/
